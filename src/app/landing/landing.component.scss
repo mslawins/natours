@@ -1,0 +1,109 @@
+@import 'src/app/resources';
+
+$header-alpha: .8;
+
+.header {
+  height: 95vh;
+  background-image: linear-gradient(to bottom right, 
+                                    rgba($color-primary-light, $header-alpha), 
+                                    rgba($color-primary-dark, $header-alpha)),
+                    url('../../assets/hero.jpg');
+  background-size: cover;
+  background-position: top;
+
+  // four polygon vertices from top-left clockwise
+  clip-path: polygon(0% 0%, 
+                     100% 0%, 
+                     100% 75vh, 
+                     0% 100%);
+}
+
+.logo-container {
+  .logo {
+    height: 3.5rem;
+    position: relative;
+    top: 4rem;
+    left: 4rem;
+  }
+}
+
+.menu-trigger {
+  position: fixed;
+  top: 6rem;
+  right: 6rem;
+
+  background-color: white;
+  height: 7rem;
+  width: 7rem;
+  border-radius: 50%;
+
+  cursor: pointer;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, .1);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .hamburger {
+    width: 3rem;
+    height: .2rem;
+    background-color: $color-text;
+
+    &::after {
+      content: '';
+      display: block;
+      background-color: $color-text;
+      height: .2rem;
+      
+      position: relative;
+      top: .5rem;
+    }
+
+    &::before {
+      content: '';
+      display: block;
+      background-color: $color-text;
+      height: .2rem;
+
+      position: relative;
+      top: -.8rem;
+    }
+  }
+}
+
+.main {
+  @include absolute-center;
+  top: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  color: white;
+  text-transform: uppercase;
+
+  .title {
+    font-size: 6rem;
+    letter-spacing: 3.5rem;
+    font-weight: 400;
+  }
+
+  .secondary-title {
+    font-size: 2rem;
+    letter-spacing: 1.8rem;
+  }
+
+  .cta {
+    margin-top: 6rem;
+
+    background-color: white;
+    padding: 1.5rem 4rem;
+    border-radius: 10rem;
+
+    color: $color-text;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+
+    cursor: pointer;
+    outline: none;
+  }
+}

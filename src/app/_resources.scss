@@ -1,3 +1,11 @@
+$color-primary: rgb(85, 197, 122); // #55c57a
+$color-primary-light: rgb(126, 213, 111); // #7ed56f
+$color-primary-dark: rgb(40, 180, 133); // #28b485
+
+$color-text: #777;
+
+$font-primary: Lato, sans-serif;
+
 @mixin respond-to($breakpoint) {
   @if $breakpoint == bp-small {
     @media only screen and (max-width: 43.75em) { @content };
@@ -14,4 +22,11 @@
   @if $breakpoint == bp-very-large {
     @media only screen and (max-width: 81.25em) { @content };
   }
+}
+
+@mixin absolute-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

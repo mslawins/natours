@@ -1,4 +1,5 @@
-@import 'src/app/media-query-manager';
+@import url('https://fonts.googleapis.com/css?family=Lato');
+@import 'src/app/resources';
 
 * {
   margin: 0;
@@ -18,4 +19,8 @@ html {
 
 body {
   box-sizing: inherit;
+  padding: 3rem;
+
+  font-family: $font-primary;
+  line-height: 1.7;
 }
