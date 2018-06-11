@@ -19,50 +19,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 
-  .menu {
+  .top-line,
+  .middle-line,
+  .bottom-line {
     width: 3rem;
-    height: .2rem;
+    height: 2px;
     background-color: $color-gray-dark;
-
-
-    &::before,
-    &::after {
-      content: '';
-      display: block;
-      background-color: $color-gray-dark;
-      height: .2rem;
-
-      transition: .2s ease;
-    }
-
-    &::after {
-      position: relative;
-      top: .5rem;
-    }
-
-    &::before {
-      position: relative;
-      top: -.7rem;
-    }
+    position: relative;
   }
+
+  .top-line { top: -5px; }
+  .bottom-line { top: 5px; }
 }
-
-// Animation 
-.menu-container:hover {
-  .menu {
-    background-color: white;
-  }
-
-  .menu::before { 
-    top: 0;
-    transform: rotate(135deg);
-  }
-
-  .menu::after { 
-    top: -.2rem;
-    transform: rotate(-135deg);
-
-  }
-}
-

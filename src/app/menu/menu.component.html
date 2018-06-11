@@ -1,4 +1,9 @@
-<div class="menu-container">
-  <div class="menu"></div>
+<div class="menu-container" (click)="isMenuActive = !isMenuActive">
+  <div class="top-line" [@topLineState]="getMenuState()"></div>
+  <div class="middle-line" [@middleLineState]="getMenuState()"></div>
+  <div class="bottom-line" [@bottomLineState]="getMenuState()"></div>
+</div>
+
+<div *ngIf="isMenuActive">
 </div>
 
