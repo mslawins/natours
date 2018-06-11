@@ -1,0 +1,47 @@
+@import 'src/app/resources';
+
+.menu-container {
+  z-index: 10;
+
+  position: fixed;
+  top: 6rem;
+  right: 6rem;
+
+  background-color: white;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, .1);
+
+  height: 7rem;
+  width: 7rem;
+  border-radius: 50%;
+
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .menu {
+    width: 3rem;
+    height: .2rem;
+    background-color: $color-gray-dark;
+
+    &::before,
+    &::after {
+      content: '';
+      display: block;
+      background-color: inherit;
+      height: .2rem;
+    }
+
+    &::after {
+      position: relative;
+      top: .5rem;
+    }
+
+    &::before {
+      position: relative;
+      top: -.8rem;
+    }
+  }
+}
+
