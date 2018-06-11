@@ -25,12 +25,15 @@
     height: .2rem;
     background-color: $color-gray-dark;
 
+
     &::before,
     &::after {
       content: '';
       display: block;
-      background-color: inherit;
+      background-color: $color-gray-dark;
       height: .2rem;
+
+      transition: .2s ease;
     }
 
     &::after {
@@ -40,8 +43,26 @@
 
     &::before {
       position: relative;
-      top: -.8rem;
+      top: -.7rem;
     }
+  }
+}
+
+// Animation 
+.menu-container:hover {
+  .menu {
+    background-color: white;
+  }
+
+  .menu::before { 
+    top: 0;
+    transform: rotate(135deg);
+  }
+
+  .menu::after { 
+    top: -.2rem;
+    transform: rotate(-135deg);
+
   }
 }
 
