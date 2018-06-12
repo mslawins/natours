@@ -1,9 +1,16 @@
-<div class="menu-container" (click)="isMenuActive = !isMenuActive">
+<div class="menu-trigger" (click)="isMenuActive = !isMenuActive">
   <div class="top-line" [@topLineState]="getMenuState()"></div>
   <div class="middle-line" [@middleLineState]="getMenuState()"></div>
   <div class="bottom-line" [@bottomLineState]="getMenuState()"></div>
 </div>
 
-<div *ngIf="isMenuActive">
+<div *ngIf="isMenuActive" class="menu-container" [@menuContainer]="getMenuState()">
 </div>
 
+<ul class="list" *ngIf="isMenuActive">
+  <li class="list-element"><span>01</span>About Natours</li>
+  <li class="list-element"><span>02</span>Your benefits</li>
+  <li class="list-element"><span>03</span>Popular tours</li>
+  <li class="list-element"><span>04</span>Stories</li>
+  <li class="list-element"><span>05</span>Book now</li>
+</ul>

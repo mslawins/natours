@@ -14,8 +14,7 @@ const animations = [
       position: 'relative',
       top: '3px'
     })),
-    transition('* => active', animate('200ms')),
-    transition('active => *', animate('200ms'))
+    transition('* => *', animate('200ms')),
   ]),
 
   trigger('middleLineState', [
@@ -23,8 +22,7 @@ const animations = [
       transform: 'scale(0)',
       'transform-origin': 'right'
     })),
-    transition('* => active', animate('80ms')),
-    transition('active => *', animate('80ms'))
+    transition('* => *', animate('80ms')),
   ]),
 
   trigger('bottomLineState', [
@@ -33,8 +31,14 @@ const animations = [
       position: 'relative',
       top: '-1px'
     })),
-    transition('* => active', animate('200ms')),
-    transition('active => *', animate('200ms'))
+    transition('* => *', animate('200ms')),
+  ]),
+
+  trigger('menuContainer', [
+    state('active', style({
+      transform: 'scale(50)',
+    })),
+    transition('* => *', animate('600ms cubic-bezier(.8, .01, .55, .72)')),
   ]),
 ]
 
