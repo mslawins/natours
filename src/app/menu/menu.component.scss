@@ -1,17 +1,20 @@
 @import 'src/app/resources';
 
+$menu-trigger-location: 6rem;
+$menu-trigger-size: 7rem;
+
 .menu-trigger {
   z-index: 100;
 
   position: fixed;
-  top: 6rem;
-  right: 6rem;
+  top:  $menu-trigger-location;
+  right: $menu-trigger-location;
 
   background-color: white;
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, .1);
 
-  height: 7rem;
-  width: 7rem;
+  height: $menu-trigger-size;
+  width: $menu-trigger-size;
   border-radius: 50%;
 
   cursor: pointer;
@@ -38,18 +41,18 @@
   z-index: 10;
 
   position: fixed;
-  top: 6rem;
-  right: 6rem;
+  top: $menu-trigger-location;
+  right: $menu-trigger-location;
 
-  width: 7rem;
-  height: 7rem;
+  width: $menu-trigger-size;
+  height: $menu-trigger-size;
 
   border-radius: 50%;
 
   background-image: radial-gradient($color-primary-light, $color-primary-dark);
 }
 
-.list {
+.menu {
   @include absolute-center();
   z-index: 50;
   
@@ -64,15 +67,22 @@
   align-items: center;
   flex-direction: column;
 
-  .list-element {
+  .menu-element {
     cursor: pointer;
     padding: 1rem 2rem;
+
+    transition: all .4s linear;
 
     span { margin-right: 1.5rem; }
 
     &:hover {
       color: $color-primary;
-      background-color: white;
+      transform: translateX(5%);
+
+      // this is magic :-)
+      background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #fff 50%);
+      background-position: 100%;
+      background-size: 250%;
     }
   }
 }

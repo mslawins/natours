@@ -7,10 +7,10 @@
 <div *ngIf="isMenuActive" class="menu-container" [@menuContainer]="getMenuState()">
 </div>
 
-<ul class="list" *ngIf="isMenuActive" [@menu]="getMenuState()">
-  <li class="list-element"><span>01</span>About Natours</li>
-  <li class="list-element"><span>02</span>Your benefits</li>
-  <li class="list-element"><span>03</span>Popular tours</li>
-  <li class="list-element"><span>04</span>Stories</li>
-  <li class="list-element"><span>05</span>Book now</li>
+<ul class="menu" *ngIf="isMenuActive" [@menu]="getMenuState()">
+  <li class="menu-element"><span>01</span>About Natours</li>
+  <li class="menu-element"><span>02</span>Your benefits</li>
+  <li class="menu-element"><span>03</span>Popular tours</li>
+  <li class="menu-element"><span>04</span>Stories</li>
+  <li class="menu-element"><span>05</span>Book now</li>
 </ul>
