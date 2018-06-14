@@ -49,17 +49,11 @@ $header-alpha: .8;
   }
 
   .cta {
+    @include button;
     margin-top: 6rem;
 
-    background-color: white;
-    padding: 1.5rem 4rem;
-    border-radius: 10rem;
-
-    color: $color-gray-medium;
-    font-size: 1.6rem;
-    text-transform: uppercase;
-
-    cursor: pointer;
-    outline: none;
+    &:hover {
+      @include button-hover;
+    }
   }
 }
