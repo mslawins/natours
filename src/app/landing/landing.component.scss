@@ -16,6 +16,11 @@ $header-alpha: .8;
                      100% 0%, 
                      100% 75vh, 
                      0% 100%);
+
+  // menu has z-index 100+
+  // so first section starts from 90 and each gets down by ten in neccessary
+  position: relative;
+  z-index: 90;
 }
 
 .logo-container {

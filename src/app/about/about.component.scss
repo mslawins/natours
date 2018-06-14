@@ -1,0 +1,11 @@
+@import 'src/app/resources';
+
+.about-container {
+  padding-top: 30rem;
+  transform: translateY(-18rem); 
+
+  position: relative;
+  z-index: 80;
+
+  background-color: $color-gray-very-light;
+}
